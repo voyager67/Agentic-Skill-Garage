@@ -4,128 +4,261 @@
 
 # Agentic Skill Garage
 
-### Production workflows for agents. Practical tools for creators.
+### Creative production workflows for AI agents.
 
-**219 portable agent skills + a local-first Python toolkit** for image, video, audio, 3D, asset management, generative workflows, and creative delivery.
+A portable library of **219 agent skills** backed by a **local-first Python toolkit** for managing references, preparing creative assets, connecting local tools, and validating deliverables across image, video, audio, 3D, and game-art workflows.
 
-<a href="https://github.com/voyager67/agentic-skill-garage/stargazers"><img src="https://img.shields.io/github/stars/voyager67/agentic-skill-garage?style=for-the-badge&logo=github&label=STARS" alt="GitHub stars"></a>
-<a href="https://github.com/voyager67/agentic-skill-garage/network/members"><img src="https://img.shields.io/github/forks/voyager67/agentic-skill-garage?style=for-the-badge&logo=github&label=FORKS" alt="GitHub forks"></a>
-<a href="LICENSE"><img src="https://img.shields.io/badge/Toolkit_License-Apache--2.0-58d7c3?style=for-the-badge" alt="Apache 2.0 toolkit license"></a>
-<a href="https://github.com/voyager67/agentic-skill-garage/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/voyager67/agentic-skill-garage/ci.yml?style=for-the-badge&label=CI" alt="CI status"></a>
-<a href="https://skills.sh/voyager67/agentic-skill-garage"><img src="https://skills.sh/b/voyager67/agentic-skill-garage" alt="skills.sh installs"></a>
-<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+"></a>
-<a href="skills-index.json"><img src="https://img.shields.io/badge/Agent_Skills-219-8b78ff?style=for-the-badge" alt="219 agent skills"></a>
+<p>
+  <a href="https://github.com/voyager67/Agentic-Skill-Garage/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/voyager67/Agentic-Skill-Garage/ci.yml?branch=main&style=flat-square&label=CI" alt="CI status"></a>
+  <a href="https://github.com/voyager67/Agentic-Skill-Garage/stargazers"><img src="https://img.shields.io/github/stars/voyager67/Agentic-Skill-Garage?style=flat-square" alt="GitHub stars"></a>
+  <a href="https://github.com/voyager67/Agentic-Skill-Garage/network/members"><img src="https://img.shields.io/github/forks/voyager67/Agentic-Skill-Garage?style=flat-square" alt="GitHub forks"></a>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python 3.10 or newer"></a>
+  <a href="skills-index.json"><img src="https://img.shields.io/badge/Agent%20Skills-219-7867d5?style=flat-square" alt="219 agent skills"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/Toolkit%20License-Apache--2.0-3b9b83?style=flat-square" alt="Toolkit license Apache 2.0"></a>
+</p>
+
+[Explore the showcase](https://voyager67.github.io/Agentic-Skill-Garage/) · [Browse all skills](skills/) · [Read the security policy](SECURITY.md)
 
 </div>
 
 ---
 
-## See the Garage in action
+## Overview
 
-[![Watch the Agentic Skill Garage demonstration](assets/agentic-skill-garage-preview.gif)](assets/agentic-skill-garage-demo.mp4)
+Creative work often spans multiple tools: references need organizing, assets need consistent treatment, applications need coordination, and final outputs need validation. Agentic Skill Garage brings those steps together through two complementary components:
 
-<p align="center"><a href="assets/agentic-skill-garage-demo.mp4">▶ Watch the full CLI walkthrough (MP4)</a> · <a href="https://voyager67.github.io/agentic-skill-garage/">Open the project showcase</a></p>
+- **Agent skills** — focused, reusable `SKILL.md` workflows that give compatible AI agents structured procedures, prerequisites, quality gates, and clear deliverables.
+- **Python toolkit** — the `asg` command-line interface for practical local operations such as asset intake, hashing, identity profiles, image processing, media conversion, ComfyUI requests, and Blender scene checks.
 
-![Reference → Plan → Create → Verify → Deliver](assets/workflow-overview.svg)
+The project is designed to work alongside the tools you already use. It does not require a particular model provider, and it does not claim that a skill replaces a dedicated creative application.
 
-## One library. End-to-end creative workflows.
+## Demo
 
-Agentic Skill Garage equips compatible AI agents with focused, reusable procedures and gives them practical local tools for moving, inspecting, preparing, and validating creative assets. It is designed to connect the work around creative applications, not to lock users into one model provider.
+<div align="center">
 
-| Capability | What it covers |
+[![Agentic Skill Garage CLI walkthrough](assets/agentic-skill-garage-preview.gif)](assets/agentic-skill-garage-demo.mp4)
+
+[**Watch the full CLI walkthrough (MP4)**](assets/agentic-skill-garage-demo.mp4) · [Open the project showcase](https://voyager67.github.io/Agentic-Skill-Garage/)
+
+</div>
+
+The demonstration uses synthetic inputs and shows local CLI operations. It is not a recording of a paid hosted-generation workflow.
+
+## Capabilities
+
+| Area | Workflows and operations |
 |---|---|
-| **Image production** | Reference-led generation and editing, restoration, compositing, resizing, sprite sheets, contact sheets, and export checks. |
-| **Video production** | Storyboards, shot planning, continuity, rough cuts, audio sync, color workflows, and delivery validation. |
-| **Audio production** | Dialogue cleanup, sound design, localization, loudness, true-peak control, and mastering preflight. |
-| **3D and digital content** | Modeling, sculpting, topology, UVs, materials, rigging, baking, and interchange formats. |
-| **DCC and game engines** | Specialist workflows for Blender, Maya, ZBrush, Unreal Engine, Unity, and Godot. |
-| **Agentic model operations** | Local ComfyUI, Scenario MCP discovery, reference lineage, model selection, job monitoring, and cost gates. |
-| **Asset operations** | File intake, SHA-256 manifests, duplicate detection, identity profiles, and handoff-ready reference packets. |
-| **Engineering and research** | Repository analysis, testing, debugging, security review, dataset quality, experiments, and evaluation design. |
+| **Image** | Reference preparation, generation workflows, restoration, compositing, resizing, contact sheets, sprite sheets, and export checks |
+| **Video** | Briefs and storyboards, shot planning, continuity, rough cuts, audio sync, color workflows, and delivery validation |
+| **Audio** | Dialogue cleanup, sound design, localization, loudness and true-peak checks, and mastering preflight |
+| **3D** | Modeling, sculpting, topology, UVs, materials, rigging, baking, and interchange formats |
+| **Creative applications** | Specialist workflows for Blender, Maya, ZBrush, Unreal Engine, Unity, and Godot |
+| **Generative workflows** | Local ComfyUI, model selection, capability discovery, prompt contracts, job monitoring, and cost gates |
+| **Asset operations** | File intake, SHA-256 manifests, duplicate detection, identity profiles, and reference handoffs |
+| **Engineering and research** | Repository analysis, API contracts, testing, debugging, security review, dataset quality, and model evaluation |
 
-## Practical Python tools
+The complete catalogue is available in the [skill index](skills-index.json). Each skill lives in its own directory under [`skills/`](skills/).
 
-The `asg` CLI performs real local operations; skills provide the procedures agents use to plan and connect those operations.
+## Getting started
+
+### Requirements
+
+- Python **3.10 or newer** for the toolkit.
+- Pillow for optional image-processing commands.
+- FFmpeg and FFprobe for media operations.
+- Blender for Blender scene auditing and rendering.
+- A running ComfyUI instance for ComfyUI operations.
+- Node.js and the `skills` CLI only if you want to install the skill library into a supported agent environment.
+
+External creative applications and services are optional. Install and configure only the tools required by the workflows you plan to use.
+
+### 1. Clone and install the Python toolkit
 
 ```bash
+git clone https://github.com/voyager67/Agentic-Skill-Garage.git
+cd Agentic-Skill-Garage
+
 python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux: source .venv/bin/activate
-pip install -e ".[images]"
+
+# Activate the environment:
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+# macOS / Linux
+source .venv/bin/activate
+
+# Install the toolkit with optional image support
+python -m pip install -e ".[images]"
+
+# Check which local tools are available
 asg doctor
 ```
 
+The core package uses Python's standard library. The `images` extra installs Pillow; it does not install FFmpeg, Blender, ComfyUI, or other creative applications.
+
+### 2. Install the agent skills
+
+The skill library uses the open Agent Skills format. Install it with the `skills` CLI:
+
 ```bash
-# Build a traceable local reference library
+npx skills add voyager67/Agentic-Skill-Garage --all
+```
+
+To disable the installer's own anonymous telemetry for this command, set the environment variable first:
+
+```bash
+# macOS / Linux
+DISABLE_TELEMETRY=1 npx skills add voyager67/Agentic-Skill-Garage --all
+
+# Windows PowerShell
+$env:DISABLE_TELEMETRY = "1"
+npx skills add voyager67/Agentic-Skill-Garage --all
+```
+
+The installer's telemetry setting is separate from Agentic Skill Garage. This project includes no analytics or telemetry code. Refer to the [skills CLI documentation](https://www.skills.sh/docs/cli) for supported agents and installation options.
+
+## Using the toolkit
+
+The `asg` CLI provides explicit local operations. Run `asg --help` or `asg <command> --help` for the full command reference.
+
+### Asset library and identity
+
+```bash
+# Ingest selected folders while preserving their relative structure
 asg assets ingest ./references --recursive --library ./asg-assets
+
+# List ingested assets
 asg assets list --library ./asg-assets
 
-# Keep character, product, or brand requirements with their reference set
+# Create an identity profile
 asg identity init "Nova" --kind character --output ./identity/nova.json
-asg identity prompt ./identity/nova.json --manifest ./asg-assets/manifest.jsonl
 
-# Inspect, process, and verify media
+# Build a reference-aware prompt packet
+asg identity prompt ./identity/nova.json --manifest ./asg-assets/manifest.jsonl
+```
+
+### Image and media
+
+```bash
+# Inspect an image
 asg image info ./references/hero.png
+
+# Resize without overwriting the source
 asg image resize ./references/hero.png ./exports/hero.webp --width 1600 --height 900 --fit contain
+
+# Create a contact sheet
 asg image contact-sheet ./references/one.png ./references/two.png --output ./exports/contact.jpg
+
+# Inspect media and measure loudness
 asg media probe ./input.mov
 asg media loudness ./input.mov
+
+# Normalize audio and transcode media
 asg media normalize-audio ./input.mov ./exports/normalized.wav --target-lufs -16
 asg media transcode ./input.mov ./exports/web.mp4 --preset h264-web
+```
 
-# Connect explicitly to a local ComfyUI instance
+### Local ComfyUI and Blender
+
+```bash
+# Check the default local ComfyUI endpoint
 asg comfyui status
+
+# Explicitly upload one selected reference image
 asg comfyui upload ./references/hero.png
+
+# Submit an API-format workflow and monitor the returned prompt ID
 asg comfyui submit ./workflow-api.json
 asg comfyui wait <prompt-id> --timeout 600
 
-# Inspect or render a Blender scene when Blender is installed
+# Audit a Blender scene or render a still frame
 asg blender audit ./scene.blend
 asg blender render ./scene.blend ./renders/preview --frame 1
 ```
 
-The core package uses Python's standard library. Pillow enables optional image commands. FFmpeg/FFprobe, Blender, ComfyUI, and the named DCC/game-engine applications are optional prerequisites for their respective operations.
+ComfyUI defaults to loopback. Remote HTTPS endpoints require the explicit `--allow-remote` option. A workflow submission sends the supplied workflow JSON to the configured ComfyUI server; it does not automatically upload the local reference files referenced by that workflow. Use the separate upload command only for files you intend to transfer.
 
-## Browse the skill library
+## How the project is organized
 
-The catalogue contains **219 independently authored `SKILL.md` workflows**, organized by production domain. Start with the [machine-readable skill index](skills-index.json) or browse the [`skills/`](skills/) directory.
-
-Install the complete skill library with the open `skills` CLI (Node.js 22.20+):
-
-```bash
-# Disable the installer's own anonymous telemetry for this command
-DISABLE_TELEMETRY=1 npx skills add voyager67/agentic-skill-garage --all
+```text
+.
+├── skills/                       # Portable SKILL.md workflows
+├── skills-index.json              # Machine-readable skill catalogue
+├── src/agentic_skill_garage/      # Python package and CLI implementation
+├── tests/                         # Automated tests
+├── scripts/                       # Catalogue validation
+├── config/                        # Safe example configuration
+├── docs/                          # Architecture notes
+├── examples/                      # Usage examples
+├── assets/                        # Demo and visual assets
+├── .github/workflows/             # CI and Pages deployment
+├── index.html                     # Static project showcase
+└── pyproject.toml                  # Python package configuration
 ```
 
-On PowerShell, set `$env:DISABLE_TELEMETRY = "1"` before running the same `npx` command. The external installer has its own telemetry controls; this setting is separate from Agentic Skill Garage, which includes no telemetry. See the [skills CLI reference](https://www.skills.sh/docs/cli). Skill files are plain Markdown with standard frontmatter; no vendor runtime is bundled.
+### Design principles
 
-## Designed for control, not hidden spend
+- **Local-first:** local asset and media operations run on the user's machine.
+- **Explicit network boundaries:** no automatic provider discovery, background uploads, or hidden external transfers.
+- **Cost awareness:** estimates are based on user-maintained, dated rate cards; missing or stale prices are not treated as free.
+- **Safer file handling:** inputs are preserved, outputs use explicit destinations, and overwrite behavior is guarded.
+- **Portable skills:** workflows are plain Markdown and are kept separate from the Python runtime.
+- **Evidence over claims:** application-specific compatibility and live service behavior must be tested in the environment where they will be used.
 
-- **Local-first:** asset intake, hashing, identity profiles, image helpers, and media processing run on your machine.
-- **Explicit transfers:** network destinations and reference uploads are opt-in; ComfyUI defaults to loopback.
-- **Cost before generation:** estimates use dated, sourced rate cards. Missing or stale rates are reported as unpriced.
-- **No telemetry:** no analytics, background uploads, or automatic provider calls are included.
-- **No silent overwrites:** file operations use explicit destinations and guarded output behavior.
-- **Privacy-aware:** read [PRIVACY.md](PRIVACY.md) and [SECURITY.md](SECURITY.md) before connecting external services.
+## Privacy and security
 
-## Evidence and scope
+Agentic Skill Garage includes no telemetry, analytics, or background synchronization. It does not bundle hosted-provider API clients or require provider credentials for the core toolkit.
 
-The demo uses synthetic inputs and shows actual local CLI operations. Automated tests cover filesystem safety, reference intake, identity packets, quote validation, ComfyUI request policy, image helpers, and media handling. Application-specific Maya, ZBrush, Unreal, Unity, Godot, Blender, Scenario MCP, and live ComfyUI behavior must be tested on systems where those applications or services are installed and configured.
+Some operations intentionally communicate with a local or explicitly configured service. For example, ComfyUI status checks, workflow submissions, and explicit image uploads send requests to the selected ComfyUI endpoint. Review the destination before allowing a remote connection.
 
-**This project does not claim to recreate a hosted image/video model or replace a proprietary editor by installing a skill.** It orchestrates local open tools and explicitly connected services, with application-specific workflows where supported.
+Before using the project with private assets or external services, read:
+
+- [Privacy and data handling](PRIVACY.md)
+- [Security policy](SECURITY.md)
+
+Do not commit API keys, access tokens, private URLs, customer assets, identity profiles, or local asset manifests.
+
+## Testing and validation
+
+Run the catalogue validator and unit tests from the repository root:
+
+```bash
+python scripts/validate_skills.py
+python -m unittest discover -s tests -v
+```
+
+GitHub Actions runs the validation and test suite against Python 3.10, 3.11, 3.12, and 3.13. The tests use temporary files and mocked external services where appropriate; they do not replace testing with the actual installed creative applications or a live ComfyUI server.
 
 ## Contributing
 
-Contributions should add a concrete workflow, executable helper, compatibility test, or reproducible improvement. Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting changes.
+Issues and pull requests are welcome for concrete workflow improvements, bug fixes, compatibility corrections, tests, and documentation.
 
-## License
+Before contributing:
 
-The Python toolkit and project-authored repository documentation/showcase are covered by the root [Apache License 2.0](LICENSE). The skill library needs a provenance correction: current SKILL.md frontmatter labels all 219 skills Apache-2.0, but repository history records 25 legacy engineering/research skills as MIT and refers to an original MIT notice that is absent from the current tree. Until the affected paths and original attribution are restored, do not treat the root license as proof that every skill was validly relicensed. See [NOTICE.md](NOTICE.md). Third-party applications, models, extensions, and services retain their own licenses and terms; design references are listed in [REFERENCES.md](REFERENCES.md).
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md).
+2. Keep changes focused and consistent with the existing architecture.
+3. Add or update tests when changing executable behavior.
+4. Run the validator and relevant tests.
+5. Document application versions, prerequisites, and limitations for workflow changes.
+
+Please do not submit credentials, private media, customer data, or unlicensed third-party content.
+
+## Project scope
+
+A skill provides instructions and workflow structure; it does not install a proprietary editor, provide a hosted model, or guarantee that an external service is available. Blender, Maya, ZBrush, Unreal Engine, Unity, Godot, ComfyUI, Scenario MCP, and other integrations require the relevant application, service, configuration, and permissions. Capabilities that have not been tested in the target environment should be treated as unverified.
+
+## License and provenance
+
+The Python toolkit and project-authored repository documentation and showcase are covered by the root [Apache License 2.0](LICENSE).
+
+The skill library has a documented licensing-provenance issue: all 219 current `SKILL.md` files declare Apache-2.0 in their frontmatter, while an earlier maintainer record identifies 25 legacy engineering/research skills as MIT-licensed and refers to an original MIT notice that is not present in the current tree. The affected paths and original attribution still require verification. Do not assume the root license resolves that historical issue; review [NOTICE.md](NOTICE.md) before redistributing skill files.
+
+Third-party applications, models, extensions, and services retain their own licenses and terms. See [REFERENCES.md](REFERENCES.md) for project and compatibility references.
 
 ---
 
 <div align="center">
 
-**Agentic Skill Garage** · Open workflows. Real tools. Verifiable output.
+**Agentic Skill Garage**  
+*Open workflows. Practical tools. Verifiable output.*
 
 </div>
