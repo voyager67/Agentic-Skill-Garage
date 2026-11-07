@@ -15,3 +15,21 @@ asg-assets/
 *.tmp
 .DS_Store
 Thumbs.db
+
+# Local project material and potentially private creative assets
+/identity/
+/references/
+/private-references/
+/project-assets/
+/exports/
+/renders/
+**/manifest.jsonl
+
+# Local credentials and private key material
+.envrc
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore

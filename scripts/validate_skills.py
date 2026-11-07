@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 NAME = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+ALLOWED_LICENSES = {"Apache-2.0", "MIT"}
 FRONTMATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 
 
@@ -32,13 +33,17 @@ def parse_frontmatter(text: str):
 
 def main() -> int:
     skill_root = ROOT / "skills"
-    if not skill_root.is_dir():
-        print(f"ERROR: skills directory not found: {skill_root}", file=sys.stderr)
+    if skill_root.is_symlink() or not skill_root.is_dir():
+        print(f"ERROR: skills directory missing or symlinked: {skill_root}", file=sys.stderr)
         return 2
     errors = []
     actual = set()
-    directories = sorted(p for p in skill_root.iterdir() if p.is_dir())
+    license_counts = {}
+    directories = sorted(p for p in skill_root.iterdir() if p.is_dir() or p.is_symlink())
     for folder in directories:
+        if folder.is_symlink() or not folder.is_dir():
+            errors.append(f"{folder}: skill directories must not be symlinks")
+            continue
         manifest = folder / "SKILL.md"
         if not NAME.fullmatch(folder.name):
             errors.append(f"{manifest}: invalid skill directory name")
@@ -58,8 +63,11 @@ def main() -> int:
             errors.append(f"{manifest}: description is required")
         elif len(description) > 1024:
             errors.append(f"{manifest}: description exceeds 1024 characters")
-        if fields.get("license") != "Apache-2.0":
-            errors.append(f"{manifest}: expected Apache-2.0 license metadata")
+        license_name = fields.get("license")
+        if license_name not in ALLOWED_LICENSES:
+            errors.append(f"{manifest}: license must be one of {sorted(ALLOWED_LICENSES)}")
+        else:
+            license_counts[license_name] = license_counts.get(license_name, 0) + 1
         body = FRONTMATTER.sub("", text, count=1)
         if len(body.splitlines()) < 18:
             errors.append(f"{manifest}: skill instructions are too short")
@@ -89,8 +97,10 @@ def main() -> int:
         for error in errors:
             print(f"- {error}")
         return 1
-    print(f"Validated {len(actual)} Apache-2.0 Agent Skills and {len(indexed)} catalogue entries.")
-    print("Checks cover directory names, frontmatter, descriptions, license metadata, body depth, and index consistency.")
+    declared = ", ".join(f"{name}: {count}" for name, count in sorted(license_counts.items()))
+    print(f"Validated {len(actual)} Agent Skills ({declared}) and {len(indexed)} catalogue entries.")
+    print("Checks cover directory safety, names, frontmatter, descriptions, declared license identifiers, body depth, and index consistency.")
+    print("License metadata validation does not establish copyright ownership or resolve upstream provenance; see NOTICE.md.")
     return 0
 
 if __name__ == "__main__":

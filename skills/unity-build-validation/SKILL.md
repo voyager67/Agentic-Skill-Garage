@@ -13,7 +13,7 @@ Validate builds across target platforms with reproducible settings. The result m
 ## Inputs and prerequisites
 
 - Project version, target platform, render pipeline, plugin/package set, asset specifications, and acceptance criteria.
-- The installed Unreal Editor or Unity Editor, their scripting/command-line interfaces, profilers, and project logs.
+- The target Unity Editor version, required platform build modules, Unity Package Manager dependencies, supported scripting APIs, profilers, and Editor.log.
 - Confirm the target application's version and the actual capabilities available in this environment.
 
 ## Procedure

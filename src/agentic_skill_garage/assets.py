@@ -1,6 +1,6 @@
 """Local asset intake, manifests, and duplicate discovery."""
 from __future__ import annotations
-import hashlib, json, mimetypes, os, shutil, tempfile
+import hashlib, json, mimetypes, os, re, shutil, tempfile
 from pathlib import Path, PurePosixPath
 from datetime import datetime, timezone
 from .security import require_regular_file
@@ -29,8 +29,22 @@ def _entries(root: Path):
     for number,line in enumerate(m.read_text(encoding="utf-8").splitlines(),1):
         if not line.strip():
             continue
-        try: result.append(json.loads(line))
-        except json.JSONDecodeError as exc: raise ValueError(f"Invalid manifest line {number}: {exc}") from exc
+        try:
+            item=json.loads(line)
+        except json.JSONDecodeError as exc:
+            raise ValueError(f"Invalid manifest line {number}: {exc}") from exc
+        if not isinstance(item,dict):
+            raise ValueError(f"Invalid manifest line {number}: expected a JSON object")
+        sha=item.get("sha256")
+        if not isinstance(sha,str) or not re.fullmatch(r"[0-9a-f]{64}",sha):
+            raise ValueError(f"Invalid manifest line {number}: sha256 must be 64 lowercase hexadecimal characters")
+        relative=item.get("path")
+        if not isinstance(relative,str):
+            raise ValueError(f"Invalid manifest line {number}: path must be a relative string")
+        rel=PurePosixPath(relative)
+        if rel.is_absolute() or not rel.parts or any(part in {".",".."} for part in rel.parts) or "\\" in relative or ":" in relative:
+            raise ValueError(f"Invalid manifest line {number}: unsafe relative asset path")
+        result.append(item)
     return result
 
 def ingest(source: Path, library: Path, relative_path: str|None=None) -> dict:

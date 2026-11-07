@@ -32,3 +32,9 @@ Agentic Skill Garage does not retain or sync files outside the directories selec
 Image commands read local files using Pillow when installed. They create new outputs, do not overwrite inputs, and do not transmit the images.
 
 The optional ComfyUI upload command sends one explicitly selected image to the configured ComfyUI server. It defaults to loopback; a remote HTTPS destination requires `--allow-remote`. No references are uploaded as a side effect of submitting a workflow.
+
+## Generated project data
+
+Identity profiles and asset manifests can reveal project names, asset filenames, and creative requirements. Keep them out of public repositories when they describe private work. The repository ignore rules cover common identity/reference/output folders and manifest.jsonl files, but review git status before every commit, especially when using custom output locations.
+
+Image resize exports remove source EXIF/GPS, XMP, and comment metadata. ICC color profiles and DPI are retained where available so color rendering and print resolution remain useful. Contact sheets are newly rendered composites and do not copy source metadata.

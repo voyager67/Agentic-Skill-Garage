@@ -15,6 +15,14 @@ def _destination(path: Path, source: Path|None=None) -> Path:
     return prepare_output_path(Path(path), source=source)
 
 def _save(image, out: Path, fmt: str|None=None, quality: int=92):
+    # Keep color/print calibration but remove EXIF, GPS, comments, XMP, and other source metadata.
+    safe_info={key:image.info[key] for key in ("icc_profile","dpi") if key in image.info}
+    image.info.clear()
+    image.info.update(safe_info)
+    try:
+        image.getexif().clear()
+    except (AttributeError, TypeError):
+        pass
     fd,tmp_name=tempfile.mkstemp(prefix=".afk-image-",suffix=out.suffix,dir=out.parent); os.close(fd); tmp=Path(tmp_name)
     try:
         save_format=fmt or out.suffix.lstrip(".").upper()

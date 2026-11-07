@@ -22,4 +22,4 @@ Contributions should improve a real task, not inflate a skill count.
 
 ## License
 
-New contributions are Apache-2.0 unless a file or subtree carries an explicitly preserved third-party license. Do not relabel the original MIT-licensed skill files.
+New Python toolkit code, repository documentation, website files, and newly authored skills default to Apache-2.0 unless a file or subtree carries another license. Preserve existing per-skill license metadata and upstream notices. Repository history records 25 legacy engineering/research skills as MIT, but the corresponding MIT license file and affected-path list are absent from the current tree; do not relabel or claim those legacy files as Apache-2.0 until their source provenance and notices are restored. See NOTICE.md.

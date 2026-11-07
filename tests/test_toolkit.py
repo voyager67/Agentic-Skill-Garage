@@ -25,6 +25,12 @@ class AssetTests(unittest.TestCase):
             root=Path(d); a=root/"a.png"; b=root/"b.png"; a.write_bytes(b"same"); b.write_bytes(b"same")
             ingest(a,root/"lib"); result=ingest(b,root/"lib")
             self.assertEqual(result["status"],"duplicate")
+    def test_manifest_rejects_non_object_json(self):
+        with tempfile.TemporaryDirectory() as d:
+            library=Path(d)/"library"; library.mkdir()
+            (library/"manifest.jsonl").write_text("[]\n",encoding="utf-8")
+            with self.assertRaises(ValueError):
+                list_assets(library)
     def test_existing_destination_never_overwritten(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d); src=root/"src"; src.write_text("new")
@@ -131,6 +137,19 @@ class ImageTests(unittest.TestCase):
             result=image.resize(src,out,200,100,fit="contain",allow_upscale=True)
             self.assertEqual((result["width"],result["height"]),(200,100))
             with self.assertRaises(FileExistsError): image.resize(src,out,200,100,fit="contain",allow_upscale=True)
+    def test_resize_strips_exif_metadata(self):
+        try: from PIL import Image
+        except ImportError: self.skipTest("Pillow unavailable")
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d); src=root/"with-private-metadata.png"; out=root/"clean.png"
+            original=Image.new("RGB",(100,100),(20,40,60))
+            exif=Image.Exif(); exif[315]="Private author name"
+            original.save(src,exif=exif)
+            image.resize(src,out,100,100,fit="contain")
+            with Image.open(out) as rendered:
+                self.assertNotIn(315,rendered.getexif())
+                self.assertNotIn("exif",rendered.info)
+
     def test_contact_sheet_rejects_empty_input(self):
         with tempfile.TemporaryDirectory() as d:
             with self.assertRaises(ValueError): image.contact_sheet([],Path(d)/"sheet.png")
@@ -145,6 +164,37 @@ class ImageTests(unittest.TestCase):
             self.assertEqual(elsewhere.read_bytes(),b"keep")
 
 class MediaTests(unittest.TestCase):
+    def test_transcode_failure_preserves_destination_created_during_run(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d); src=root/"in.mov"; src.write_bytes(b"source")
+            output=root/"out.mp4"
+            def fail_after_concurrent_create(command,**kwargs):
+                Path(command[-1]).write_bytes(b"partial staged output")
+                output.write_bytes(b"user-created file")
+                return Mock(returncode=1,stderr="simulated ffmpeg failure")
+            with patch("agentic_skill_garage.media._binary",return_value="ffmpeg"), \
+                 patch("agentic_skill_garage.media.subprocess.run",side_effect=fail_after_concurrent_create):
+                with self.assertRaises(RuntimeError):
+                    media.transcode(src,output,"h264-web")
+            self.assertEqual(output.read_bytes(),b"user-created file")
+
+    def test_extract_frames_failure_does_not_delete_user_frame(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d); src=root/"in.mov"; src.write_bytes(b"source")
+            output=root/"frames"
+            user_frame=output/"frame-000001.jpg"
+            def fail_after_concurrent_create(command,**kwargs):
+                output.mkdir()
+                user_frame.write_bytes(b"user-frame")
+                staged_pattern=Path(command[-1])
+                (staged_pattern.parent/"frame-000001.jpg").write_bytes(b"partial staged frame")
+                return Mock(returncode=1,stderr="simulated ffmpeg failure")
+            with patch("agentic_skill_garage.media._binary",return_value="ffmpeg"), \
+                 patch("agentic_skill_garage.media.subprocess.run",side_effect=fail_after_concurrent_create):
+                with self.assertRaises(RuntimeError):
+                    media.extract_frames(src,output,1.0)
+            self.assertEqual(user_frame.read_bytes(),b"user-frame")
+
     def test_transcode_preset_is_allowlisted(self):
         with tempfile.TemporaryDirectory() as d:
             src=Path(d)/"in.mov"; src.write_bytes(b"x")
@@ -158,7 +208,8 @@ class MediaTests(unittest.TestCase):
             src=Path(d)/"in.wav"; src.write_bytes(b"x")
             stderr="""Summary:\n  Integrated loudness:\n    I:         -16.2 LUFS\n  Loudness range:\n    LRA:        3.4 LU\n  True peak:\n    Peak:      -1.3 dBFS\n"""
             result=Mock(returncode=0,stderr=stderr,stdout="")
-            with patch("agentic_skill_garage.media.subprocess.run",return_value=result):
+            with patch("agentic_skill_garage.media._binary",return_value="ffmpeg"), \
+                 patch("agentic_skill_garage.media.subprocess.run",return_value=result):
                 measured=media.measure_loudness(src)
             self.assertEqual(measured["status"],"measured")
             self.assertEqual(measured["integrated_lufs"],-16.2)

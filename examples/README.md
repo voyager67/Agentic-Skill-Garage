@@ -4,6 +4,6 @@ Create a project-local asset folder and identity profile, then keep generated ou
 
 ```bash
 asg assets ingest ./private-references/hero.png --library ./project-assets
-asg identity init "Project Hero" --kind character --output ./project/hero.json
+asg identity init "Project Hero" --kind character --output ./identity/project-hero.json
 asg identity prompt ./project/hero.json --manifest ./project-assets/manifest.jsonl
 ```

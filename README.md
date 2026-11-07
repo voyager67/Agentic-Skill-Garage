@@ -10,7 +10,7 @@
 
 <a href="https://github.com/voyager67/agentic-skill-garage/stargazers"><img src="https://img.shields.io/github/stars/voyager67/agentic-skill-garage?style=for-the-badge&logo=github&label=STARS" alt="GitHub stars"></a>
 <a href="https://github.com/voyager67/agentic-skill-garage/network/members"><img src="https://img.shields.io/github/forks/voyager67/agentic-skill-garage?style=for-the-badge&logo=github&label=FORKS" alt="GitHub forks"></a>
-<a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-58d7c3?style=for-the-badge" alt="Apache 2.0"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/Toolkit_License-Apache--2.0-58d7c3?style=for-the-badge" alt="Apache 2.0 toolkit license"></a>
 <a href="https://github.com/voyager67/agentic-skill-garage/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/voyager67/agentic-skill-garage/ci.yml?style=for-the-badge&label=CI" alt="CI status"></a>
 <a href="https://skills.sh/voyager67/agentic-skill-garage"><img src="https://skills.sh/b/voyager67/agentic-skill-garage" alt="skills.sh installs"></a>
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+"></a>
@@ -120,7 +120,7 @@ Contributions should add a concrete workflow, executable helper, compatibility t
 
 ## License
 
-Agentic Skill Garage is released under the [Apache License 2.0](LICENSE). Third-party applications, models, extensions, and services retain their own licenses and terms. See [NOTICE.md](NOTICE.md) and [REFERENCES.md](REFERENCES.md).
+The Python toolkit and project-authored repository documentation/showcase are covered by the root [Apache License 2.0](LICENSE). The skill library needs a provenance correction: current SKILL.md frontmatter labels all 219 skills Apache-2.0, but repository history records 25 legacy engineering/research skills as MIT and refers to an original MIT notice that is absent from the current tree. Until the affected paths and original attribution are restored, do not treat the root license as proof that every skill was validly relicensed. See [NOTICE.md](NOTICE.md). Third-party applications, models, extensions, and services retain their own licenses and terms; design references are listed in [REFERENCES.md](REFERENCES.md).
 
 ---
 
