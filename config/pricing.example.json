@@ -1,0 +1,6 @@
+{
+  "currency": "USD",
+  "max_age_days": 30,
+  "rates": [],
+  "instructions": "Add rates only from official, dated public pricing sources. Do not add secret or negotiated customer pricing. A missing rate is unpriced, not free."
+}

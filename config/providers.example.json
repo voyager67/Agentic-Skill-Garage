@@ -1,0 +1,8 @@
+{
+  "local": {
+    "comfyui": "http://127.0.0.1:8188",
+    "ollama": "http://127.0.0.1:11434"
+  },
+  "remote_providers": [],
+  "policy": "No provider is enabled by default. Configure destinations only after reviewing data handling, pricing, and terms."
+}

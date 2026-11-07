@@ -1,0 +1,1102 @@
+{
+  "name": "Agentic Skill Garage",
+  "format": "Agent Skills / SKILL.md",
+  "skill_count": 219,
+  "skills": [
+    {
+      "name": "agent-skill-audit",
+      "category": "Tooling",
+      "description": "Validate a skill library for metadata correctness, discoverability, duplicate naming, risky instructions, and portability."
+    },
+    {
+      "name": "api-contract-check",
+      "category": "Architecture",
+      "description": "Check API and schema changes for compatibility with existing clients and stored data."
+    },
+    {
+      "name": "asset-delivery-manifest",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to package a delivery with checksums, formats, sizes, and provenance."
+    },
+    {
+      "name": "asset-hash-deduplication",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to find byte-identical files without deleting or overwriting originals."
+    },
+    {
+      "name": "asset-intake",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to ingest selected files into a clean, traceable project library."
+    },
+    {
+      "name": "asset-library-taxonomy",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to design a stable folder and naming taxonomy for mixed media projects."
+    },
+    {
+      "name": "asset-provenance",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to track source, author, license, edits, and lineage for every production asset."
+    },
+    {
+      "name": "asset-rights-audit",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to check asset rights, attribution, model terms, and distribution constraints."
+    },
+    {
+      "name": "asset-version-lineage",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to track iterations, parent assets, variants, and approved finals."
+    },
+    {
+      "name": "audio-ambience-design",
+      "category": "Audio production",
+      "description": "Use when the task is to build an ambience bed with perspective, movement, and loop continuity."
+    },
+    {
+      "name": "audio-brief-to-cue-sheet",
+      "category": "Audio production",
+      "description": "Use when the task is to convert an audio brief into cues, timing, stems, and delivery requirements."
+    },
+    {
+      "name": "audio-dialogue-cleanup",
+      "category": "Audio production",
+      "description": "Use when the task is to clean dialogue and verify intelligibility without unnatural gating."
+    },
+    {
+      "name": "audio-dubbing-localization",
+      "category": "Audio production",
+      "description": "Use when the task is to prepare dubbed audio with timing, pronunciation, and localized wording checks."
+    },
+    {
+      "name": "audio-format-conversion",
+      "category": "Audio production",
+      "description": "Use when the task is to convert audio formats with explicit channel, sample-rate, and metadata handling."
+    },
+    {
+      "name": "audio-lipsync-preflight",
+      "category": "Audio production",
+      "description": "Use when the task is to prepare audio and visual timing references for a lip-sync workflow."
+    },
+    {
+      "name": "audio-loop-editing",
+      "category": "Audio production",
+      "description": "Use when the task is to create seamless audio loops and validate phase and edit boundaries."
+    },
+    {
+      "name": "audio-loudness-compliance",
+      "category": "Audio production",
+      "description": "Use when the task is to measure and deliver loudness targets for the named distribution platform."
+    },
+    {
+      "name": "audio-mastering-preflight",
+      "category": "Audio production",
+      "description": "Use when the task is to prepare a master with format, sample rate, bit depth, and headroom checks."
+    },
+    {
+      "name": "audio-music-brief",
+      "category": "Audio production",
+      "description": "Use when the task is to translate a music brief into tempo, mood, instrumentation, and structure."
+    },
+    {
+      "name": "audio-noise-reduction",
+      "category": "Audio production",
+      "description": "Use when the task is to reduce noise while preserving transients, consonants, and natural room tone."
+    },
+    {
+      "name": "audio-privacy-review",
+      "category": "Audio production",
+      "description": "Use when the task is to review voice recordings for consent, identity, retention, and disclosure requirements."
+    },
+    {
+      "name": "audio-sound-effects",
+      "category": "Audio production",
+      "description": "Use when the task is to design and organize sound effects with source and usage records."
+    },
+    {
+      "name": "audio-stem-delivery",
+      "category": "Audio production",
+      "description": "Use when the task is to plan stem naming, alignment, headroom, and export consistency."
+    },
+    {
+      "name": "audio-subtitle-timing",
+      "category": "Audio production",
+      "description": "Use when the task is to align subtitle timing to speech and readable line lengths."
+    },
+    {
+      "name": "audio-transcription-review",
+      "category": "Audio production",
+      "description": "Use when the task is to produce a corrected transcript with speaker labels and time alignment."
+    },
+    {
+      "name": "audio-true-peak-control",
+      "category": "Audio production",
+      "description": "Use when the task is to control true peaks and inter-sample overs while preserving dynamics."
+    },
+    {
+      "name": "audio-voice-direction",
+      "category": "Audio production",
+      "description": "Use when the task is to write voice direction for tone, pace, pronunciation, and emotional range."
+    },
+    {
+      "name": "blender-animation-polish",
+      "category": "Blender specialists",
+      "description": "Use when the task is to polish animation curves, arcs, spacing, holds, and contacts."
+    },
+    {
+      "name": "blender-batch-render-farm",
+      "category": "Blender specialists",
+      "description": "Use when the task is to run background render batches with per-frame logs and restart-safe outputs."
+    },
+    {
+      "name": "blender-camera-layout",
+      "category": "Blender specialists",
+      "description": "Use when the task is to set cameras, lens, composition, clipping, and safe framing."
+    },
+    {
+      "name": "blender-compositor-grading",
+      "category": "Blender specialists",
+      "description": "Use when the task is to build a non-destructive compositor pipeline with view-transform awareness."
+    },
+    {
+      "name": "blender-file-safety",
+      "category": "Blender specialists",
+      "description": "Use when the task is to open and process blend files with script auto-execution disabled by default."
+    },
+    {
+      "name": "blender-geometry-nodes",
+      "category": "Blender specialists",
+      "description": "Use when the task is to design Geometry Nodes graphs with clear inputs and inspectable outputs."
+    },
+    {
+      "name": "blender-grease-pencil",
+      "category": "Blender specialists",
+      "description": "Use when the task is to create 2D and 2.5D Grease Pencil scenes with line and layer control."
+    },
+    {
+      "name": "blender-lighting-design",
+      "category": "Blender specialists",
+      "description": "Use when the task is to plan lighting for shape readability, reflections, and render constraints."
+    },
+    {
+      "name": "blender-physics-simulation",
+      "category": "Blender specialists",
+      "description": "Use when the task is to set up deterministic physics caches and verify collision scale."
+    },
+    {
+      "name": "blender-procedural-modeling",
+      "category": "Blender specialists",
+      "description": "Use when the task is to build parameterized procedural geometry with named controls."
+    },
+    {
+      "name": "blender-python-automation",
+      "category": "Blender specialists",
+      "description": "Use when the task is to automate Blender through bpy with bounded, reviewable scripts."
+    },
+    {
+      "name": "blender-render-pipeline",
+      "category": "Blender specialists",
+      "description": "Use when the task is to render repeatable stills with explicit engine, device, samples, and output."
+    },
+    {
+      "name": "blender-scene-audit",
+      "category": "Blender specialists",
+      "description": "Use when the task is to inspect a Blender scene before making changes or rendering."
+    },
+    {
+      "name": "blender-sculpt-review",
+      "category": "Blender specialists",
+      "description": "Use when the task is to sculpt forms in stages and validate silhouette before detail."
+    },
+    {
+      "name": "blender-shader-development",
+      "category": "Blender specialists",
+      "description": "Use when the task is to build node materials with correct color spaces and reusable groups."
+    },
+    {
+      "name": "blender-video-sequencer",
+      "category": "Blender specialists",
+      "description": "Use when the task is to edit clips in Blender VSE with timeline, proxy, and export checks."
+    },
+    {
+      "name": "brand-kit-compiler",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to turn approved logos, colors, fonts, and usage rules into a practical brand kit."
+    },
+    {
+      "name": "build-rescue",
+      "category": "Delivery",
+      "description": "Investigate and repair a failing build or CI job from logs to a verified fix."
+    },
+    {
+      "name": "change-narrative",
+      "category": "Collaboration",
+      "description": "Explain a change through impact, trade-offs, and verification."
+    },
+    {
+      "name": "character-identity-bible",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to create a durable character identity specification from approved references."
+    },
+    {
+      "name": "context-handoff",
+      "category": "Collaboration",
+      "description": "Create a reliable handoff note so another engineer or coding agent can continue work without redoing exploration."
+    },
+    {
+      "name": "creative-art-direction",
+      "category": "Production & delivery",
+      "description": "Use when the task is to translate a mood and audience into visual rules that a team can apply."
+    },
+    {
+      "name": "creative-batch-planning",
+      "category": "Production & delivery",
+      "description": "Use when the task is to plan batch size, variation axes, review gates, and fallback choices."
+    },
+    {
+      "name": "creative-brief-triage",
+      "category": "Production & delivery",
+      "description": "Use when the task is to convert an incomplete creative request into decisions and a testable brief."
+    },
+    {
+      "name": "creative-collaboration-handoff",
+      "category": "Production & delivery",
+      "description": "Use when the task is to create a complete handoff between artists, agents, and production teams."
+    },
+    {
+      "name": "creative-cost-control",
+      "category": "Production & delivery",
+      "description": "Use when the task is to set spend caps, dry-run gates, and stop conditions for hosted services."
+    },
+    {
+      "name": "creative-final-delivery-audit",
+      "category": "Production & delivery",
+      "description": "Use when the task is to perform the final rights, technical, naming, and package integrity review."
+    },
+    {
+      "name": "creative-multi-format-delivery",
+      "category": "Production & delivery",
+      "description": "Use when the task is to prepare approved assets for several destinations without silent quality loss."
+    },
+    {
+      "name": "creative-refinement-loop",
+      "category": "Production & delivery",
+      "description": "Use when the task is to iterate on one controlled variable at a time and stop at an agreed quality bar."
+    },
+    {
+      "name": "creative-render-scheduling",
+      "category": "Production & delivery",
+      "description": "Use when the task is to schedule local render jobs by resource demand and recoverable checkpoints."
+    },
+    {
+      "name": "creative-review-rounds",
+      "category": "Production & delivery",
+      "description": "Use when the task is to run review rounds with actionable notes and a stable approval baseline."
+    },
+    {
+      "name": "data-quality-gate",
+      "category": "Data & AI",
+      "description": "Design validation checks for structured datasets and data pipelines."
+    },
+    {
+      "name": "dataset-workshop",
+      "category": "Data & AI",
+      "description": "Prepare consistent, traceable instruction-tuning or evaluation datasets with reproducible cleaning rules."
+    },
+    {
+      "name": "dependency-care",
+      "category": "Maintenance",
+      "description": "Evaluate dependency risk and upgrades without blind version bumps."
+    },
+    {
+      "name": "docs-sync",
+      "category": "Documentation",
+      "description": "Bring documentation, examples, and configuration guides into agreement with the actual code."
+    },
+    {
+      "name": "experiment-ledger",
+      "category": "Data & AI",
+      "description": "Make ML training experiments reproducible and comparable."
+    },
+    {
+      "name": "failure-forensics",
+      "category": "Debugging",
+      "description": "Diagnose a reproducible software failure by narrowing symptoms to a root cause and verifying the repair."
+    },
+    {
+      "name": "game-icon-set",
+      "category": "Godot & game-art specialists",
+      "description": "Use when the task is to create a game icon family with consistent silhouette and readability."
+    },
+    {
+      "name": "game-parallax-backgrounds",
+      "category": "Godot & game-art specialists",
+      "description": "Use when the task is to build layered backgrounds with depth, repeat, and camera-motion checks."
+    },
+    {
+      "name": "game-sprite-animation",
+      "category": "Godot & game-art specialists",
+      "description": "Use when the task is to create sprite animation sets with consistent pivots and timing."
+    },
+    {
+      "name": "game-tileset-authoring",
+      "category": "Godot & game-art specialists",
+      "description": "Use when the task is to build tile sets with terrain rules, collision, and transition coverage."
+    },
+    {
+      "name": "genai-capability-discovery",
+      "category": "Generative AI operations",
+      "description": "Use when the task is to discover available models and capabilities instead of relying on stale model names."
+    },
+    {
+      "name": "genai-comfyui-local",
+      "category": "Generative AI operations",
+      "description": "Use when the task is to submit a reviewed API workflow to a local ComfyUI server."
+    },
+    {
+      "name": "genai-job-monitoring",
+      "category": "Generative AI operations",
+      "description": "Use when the task is to track asynchronous generation jobs and recover from uncertain submissions."
+    },
+    {
+      "name": "genai-local-model-review",
+      "category": "Generative AI operations",
+      "description": "Use when the task is to evaluate local model outputs without uploading reference files to a provider."
+    },
+    {
+      "name": "genai-model-license-review",
+      "category": "Generative AI operations",
+      "description": "Use when the task is to review model, dataset, and output terms before commercial distribution."
+    },
+    {
+      "name": "genai-model-selection",
+      "category": "Generative AI operations",
+      "description": "Use when the task is to choose a model by output quality, controllability, latency, and constraints."
+    },
+    {
+      "name": "genai-output-evaluation",
+      "category": "Generative AI operations",
+      "description": "Use when the task is to evaluate outputs against a brief using human-readable criteria and evidence."
+    },
+    {
+      "name": "genai-price-quote",
+      "category": "Generative AI operations",
+      "description": "Use when the task is to quote a generation request before spending using a dated, sourced price card."
+    },
+    {
+      "name": "genai-prompt-contracts",
+      "category": "Generative AI operations",
+      "description": "Use when the task is to write prompts as explicit constraints, references, invariants, and acceptance tests."
+    },
+    {
+      "name": "genai-prompt-versioning",
+      "category": "Generative AI operations",
+      "description": "Use when the task is to version prompts and compare changes with repeatable examples."
+    },
+    {
+      "name": "genai-provider-fallback",
+      "category": "Generative AI operations",
+      "description": "Use when the task is to switch providers only after checking capability, input compatibility, and price."
+    },
+    {
+      "name": "genai-seed-reproducibility",
+      "category": "Generative AI operations",
+      "description": "Use when the task is to record seeds, samplers, model hashes, and settings for reproducible runs."
+    },
+    {
+      "name": "godot-2d-asset-pipeline",
+      "category": "Godot & game-art specialists",
+      "description": "Use when the task is to import 2D artwork with pixel density, filtering, and atlas settings."
+    },
+    {
+      "name": "godot-3d-scene-authoring",
+      "category": "Godot & game-art specialists",
+      "description": "Use when the task is to build 3D scenes with metric scale, collision, and resource ownership."
+    },
+    {
+      "name": "godot-animation-workflow",
+      "category": "Godot & game-art specialists",
+      "description": "Use when the task is to create AnimationPlayer and AnimationTree state transitions."
+    },
+    {
+      "name": "godot-audio-integration",
+      "category": "Godot & game-art specialists",
+      "description": "Use when the task is to route music and effects with buses, ducking, and mix validation."
+    },
+    {
+      "name": "godot-export-preflight",
+      "category": "Godot & game-art specialists",
+      "description": "Use when the task is to prepare export templates, platform settings, signing, and clean builds."
+    },
+    {
+      "name": "godot-project-audit",
+      "category": "Godot & game-art specialists",
+      "description": "Use when the task is to inspect Godot scenes, resources, autoloads, inputs, and export presets."
+    },
+    {
+      "name": "godot-shader-authoring",
+      "category": "Godot & game-art specialists",
+      "description": "Use when the task is to create canvas and spatial shaders with platform constraints."
+    },
+    {
+      "name": "godot-ui-layout",
+      "category": "Godot & game-art specialists",
+      "description": "Use when the task is to build responsive UI with anchors, containers, focus, and localization."
+    },
+    {
+      "name": "image-alpha-validation",
+      "category": "Image production",
+      "description": "Use when the task is to validate transparency, premultiplication, halos, and alpha-channel integrity."
+    },
+    {
+      "name": "image-background-removal",
+      "category": "Image production",
+      "description": "Use when the task is to remove a background while preserving hair, glass, fine edges, and soft shadows."
+    },
+    {
+      "name": "image-brief-to-prompt",
+      "category": "Image production",
+      "description": "Use when the task is to convert a visual brief into a constrained image-generation specification."
+    },
+    {
+      "name": "image-color-match",
+      "category": "Image production",
+      "description": "Use when the task is to match a target palette and tonal response using measurable reference values."
+    },
+    {
+      "name": "image-compositing-pipeline",
+      "category": "Image production",
+      "description": "Use when the task is to composite layers with consistent color space, masks, and alignment."
+    },
+    {
+      "name": "image-exact-canvas-export",
+      "category": "Image production",
+      "description": "Use when the task is to deliver exact pixel dimensions without hidden crop or resize changes."
+    },
+    {
+      "name": "image-exact-text-overlay",
+      "category": "Image production",
+      "description": "Use when the task is to add exact typography in post rather than trusting generated lettering."
+    },
+    {
+      "name": "image-generation-budget",
+      "category": "Image production",
+      "description": "Use when the task is to estimate image-batch spend before any hosted generation is submitted."
+    },
+    {
+      "name": "image-icon-family",
+      "category": "Image production",
+      "description": "Use when the task is to create a coherent icon family with shared grid, stroke, silhouette, and export rules."
+    },
+    {
+      "name": "image-masked-inpainting",
+      "category": "Image production",
+      "description": "Use when the task is to repair a bounded image region with a reviewed mask and clear preservation rules."
+    },
+    {
+      "name": "image-mockup-production",
+      "category": "Image production",
+      "description": "Use when the task is to create realistic product and interface mockups from approved source artwork."
+    },
+    {
+      "name": "image-model-routing",
+      "category": "Image production",
+      "description": "Use when the task is to select an image model by task, reference support, output control, and verified price."
+    },
+    {
+      "name": "image-outpainting",
+      "category": "Image production",
+      "description": "Use when the task is to extend a canvas while maintaining perspective, lighting, and edge continuity."
+    },
+    {
+      "name": "image-print-preflight",
+      "category": "Image production",
+      "description": "Use when the task is to prepare raster artwork for print with resolution, bleed, profile, and size checks."
+    },
+    {
+      "name": "image-product-photography",
+      "category": "Image production",
+      "description": "Use when the task is to build product packshots and lifestyle compositions with fidelity checks."
+    },
+    {
+      "name": "image-reference-edit",
+      "category": "Image production",
+      "description": "Use when the task is to edit an image while preserving the approved subject and unchanged regions."
+    },
+    {
+      "name": "image-restoration",
+      "category": "Image production",
+      "description": "Use when the task is to restore damaged or low-quality imagery without inventing unsupported detail."
+    },
+    {
+      "name": "image-sprite-sheet",
+      "category": "Image production",
+      "description": "Use when the task is to generate, slice, and validate sprite sheets with consistent cell geometry."
+    },
+    {
+      "name": "image-upscale-quality",
+      "category": "Image production",
+      "description": "Use when the task is to upscale an image and inspect detail, halos, texture invention, and edge artifacts."
+    },
+    {
+      "name": "image-variation-batch",
+      "category": "Image production",
+      "description": "Use when the task is to create controlled variations while changing only named prompt dimensions."
+    },
+    {
+      "name": "maya-animation-workflow",
+      "category": "Maya specialists",
+      "description": "Use when the task is to block and polish animation with graph-editor and timing discipline."
+    },
+    {
+      "name": "maya-engine-export",
+      "category": "Maya specialists",
+      "description": "Use when the task is to export Maya assets with scale, axis, skeleton, and animation validation."
+    },
+    {
+      "name": "maya-fx-simulation",
+      "category": "Maya specialists",
+      "description": "Use when the task is to plan Bifrost, nCloth, particles, and simulation caches safely."
+    },
+    {
+      "name": "maya-groom-production",
+      "category": "Maya specialists",
+      "description": "Use when the task is to build groom systems with density, clumping, direction, and cache checks."
+    },
+    {
+      "name": "maya-lighting-rendering",
+      "category": "Maya specialists",
+      "description": "Use when the task is to set up Arnold lighting, sampling, render layers, and AOV delivery."
+    },
+    {
+      "name": "maya-lookdev-materials",
+      "category": "Maya specialists",
+      "description": "Use when the task is to develop materials and look-dev turntables with consistent lighting."
+    },
+    {
+      "name": "maya-modeling-workflow",
+      "category": "Maya specialists",
+      "description": "Use when the task is to model production assets with clean transforms, history, and naming."
+    },
+    {
+      "name": "maya-python-pipeline",
+      "category": "Maya specialists",
+      "description": "Use when the task is to automate Maya with maya.cmds and API 2.0 using explicit scene assumptions."
+    },
+    {
+      "name": "maya-reference-management",
+      "category": "Maya specialists",
+      "description": "Use when the task is to manage references, namespaces, versions, and broken-path remediation."
+    },
+    {
+      "name": "maya-retopology-workflow",
+      "category": "Maya specialists",
+      "description": "Use when the task is to retopologize meshes for deformation, subdivision, and downstream export."
+    },
+    {
+      "name": "maya-rig-architecture",
+      "category": "Maya specialists",
+      "description": "Use when the task is to design scalable controls, hierarchy, and deformation interfaces."
+    },
+    {
+      "name": "maya-scene-audit",
+      "category": "Maya specialists",
+      "description": "Use when the task is to inspect Maya scene state, references, namespaces, units, and render settings."
+    },
+    {
+      "name": "maya-skinning-review",
+      "category": "Maya specialists",
+      "description": "Use when the task is to review skin weights, joints, poses, and deformation hot spots."
+    },
+    {
+      "name": "maya-uv-production",
+      "category": "Maya specialists",
+      "description": "Use when the task is to create UV sets with texel density, shell padding, and overlap checks."
+    },
+    {
+      "name": "model-diff-review",
+      "category": "Data & AI",
+      "description": "Compare two model checkpoints or prompt configurations using a consistent evaluation harness and error taxonomy."
+    },
+    {
+      "name": "model-eval-design",
+      "category": "Data & AI",
+      "description": "Build an evaluation plan that measures a model capability rather than a single attractive example."
+    },
+    {
+      "name": "multi-agent-crosscheck",
+      "category": "Collaboration",
+      "description": "Use independent reviewers or model providers to challenge a plan or diff and synthesize evidence-based disagreement."
+    },
+    {
+      "name": "parallel-task-design",
+      "category": "Collaboration",
+      "description": "Break a multi-part engineering task into safely parallel work units with clear ownership and integration points."
+    },
+    {
+      "name": "performance-proof",
+      "category": "Performance",
+      "description": "Find and validate a measurable performance bottleneck before optimizing."
+    },
+    {
+      "name": "product-fidelity-review",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to compare product renders against source photos and non-negotiable product details."
+    },
+    {
+      "name": "prompt-reference-packet",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to prepare a compact, role-labeled reference packet for a generation agent."
+    },
+    {
+      "name": "reference-contact-sheets",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to build and review contact sheets for large reference sets."
+    },
+    {
+      "name": "reference-role-mapping",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to assign clear subject, pose, camera, environment, palette, and style roles to references."
+    },
+    {
+      "name": "release-readiness",
+      "category": "Delivery",
+      "description": "Assess whether a change is ready for a tagged release or deployment."
+    },
+    {
+      "name": "repo-scout",
+      "category": "Orientation",
+      "description": "Map an unfamiliar codebase before changing it."
+    },
+    {
+      "name": "research-evidence-map",
+      "category": "Research",
+      "description": "Turn a technical research question into a traceable evidence map with source quality, uncertainty, and actionable next experiments."
+    },
+    {
+      "name": "review-lens",
+      "category": "Quality",
+      "description": "Review a diff for actionable correctness, security, reliability, and maintainability defects."
+    },
+    {
+      "name": "safe-migration",
+      "category": "Architecture",
+      "description": "Plan and execute a controlled migration of code, schemas, frameworks, or configuration while preserving a rollback path."
+    },
+    {
+      "name": "scenario-mcp-connection-setup",
+      "category": "Scenario MCP operations",
+      "description": "Use when connecting an AI agent to the public Scenario MCP server or diagnosing its tool discovery and authorization setup."
+    },
+    {
+      "name": "scenario-mcp-consistency-review",
+      "category": "Scenario MCP operations",
+      "description": "Use when reviewing Scenario-generated batches for character, brand, product, environment, and shot-to-shot consistency."
+    },
+    {
+      "name": "scenario-mcp-cost-gated-generation",
+      "category": "Scenario MCP operations",
+      "description": "Use when submitting a paid or metered Scenario MCP generation job that needs an exact payload, cost quote, and explicit approval."
+    },
+    {
+      "name": "scenario-mcp-model-routing",
+      "category": "Scenario MCP operations",
+      "description": "Use when choosing a Scenario model for an image, video, audio, texture, or 3D capability from the live catalog."
+    },
+    {
+      "name": "scenario-mcp-quality-budget-loop",
+      "category": "Scenario MCP operations",
+      "description": "Use when iterating on Scenario outputs with quality checks, a bounded spend budget, and a measurable stop condition."
+    },
+    {
+      "name": "scenario-mcp-reference-lineage",
+      "category": "Scenario MCP operations",
+      "description": "Use when managing approved reference uploads, generated assets, and source-to-output lineage through Scenario MCP."
+    },
+    {
+      "name": "security-surface",
+      "category": "Security",
+      "description": "Perform a focused threat review of code, APIs, configuration, and dependencies."
+    },
+    {
+      "name": "spec-first",
+      "category": "Planning",
+      "description": "Turn a feature request into testable acceptance criteria and a small implementation plan before editing."
+    },
+    {
+      "name": "sql-integrity-check",
+      "category": "Data & AI",
+      "description": "Review SQL queries and data-model changes for correctness, access scope, safe parameterization, and performance."
+    },
+    {
+      "name": "test-driven-change",
+      "category": "Implementation",
+      "description": "Implement a behavior change with tests that demonstrate the requirement and protect regressions."
+    },
+    {
+      "name": "three-d-animation-blocking",
+      "category": "3D asset production",
+      "description": "Use when the task is to block motion with timing, silhouettes, contacts, and readable poses."
+    },
+    {
+      "name": "three-d-asset-brief",
+      "category": "3D asset production",
+      "description": "Use when the task is to turn a 3D asset request into geometry, topology, and delivery constraints."
+    },
+    {
+      "name": "three-d-fbx-export",
+      "category": "3D asset production",
+      "description": "Use when the task is to export FBX with axis, unit, animation, and hierarchy checks."
+    },
+    {
+      "name": "three-d-gltf-export",
+      "category": "3D asset production",
+      "description": "Use when the task is to export GLB or glTF with materials, transforms, and texture validation."
+    },
+    {
+      "name": "three-d-hard-surface-modeling",
+      "category": "3D asset production",
+      "description": "Use when the task is to build hard-surface geometry with controlled bevels, booleans, and normals."
+    },
+    {
+      "name": "three-d-image-to-mesh",
+      "category": "3D asset production",
+      "description": "Use when the task is to plan image-to-3D reconstruction and inspect the resulting shape against references."
+    },
+    {
+      "name": "three-d-lod-strategy",
+      "category": "3D asset production",
+      "description": "Use when the task is to plan and validate levels of detail for the target camera and runtime."
+    },
+    {
+      "name": "three-d-material-library",
+      "category": "3D asset production",
+      "description": "Use when the task is to organize reusable materials with units, color space, and version metadata."
+    },
+    {
+      "name": "three-d-mesh-optimization",
+      "category": "3D asset production",
+      "description": "Use when the task is to reduce geometry while protecting silhouette, UVs, and shading."
+    },
+    {
+      "name": "three-d-pbr-materials",
+      "category": "3D asset production",
+      "description": "Use when the task is to build physically based materials with calibrated texture channels."
+    },
+    {
+      "name": "three-d-print-preflight",
+      "category": "3D asset production",
+      "description": "Use when the task is to prepare a watertight 3D-print mesh with scale and wall-thickness checks."
+    },
+    {
+      "name": "three-d-reference-turnaround",
+      "category": "3D asset production",
+      "description": "Use when the task is to prepare orthographic and perspective reference views for modeling."
+    },
+    {
+      "name": "three-d-retopology",
+      "category": "3D asset production",
+      "description": "Use when the task is to create production topology from sculpted, scanned, or generated meshes."
+    },
+    {
+      "name": "three-d-rig-planning",
+      "category": "3D asset production",
+      "description": "Use when the task is to design a rig around required poses, deformation, and target runtime."
+    },
+    {
+      "name": "three-d-sculpt-workflow",
+      "category": "3D asset production",
+      "description": "Use when the task is to plan sculpt stages from primary forms through surface detail."
+    },
+    {
+      "name": "three-d-skin-weight-audit",
+      "category": "3D asset production",
+      "description": "Use when the task is to review skin weights at deformation extremes and correct volume loss."
+    },
+    {
+      "name": "three-d-symmetry-review",
+      "category": "3D asset production",
+      "description": "Use when the task is to check symmetry, intentional asymmetry, pivots, and mirrored topology."
+    },
+    {
+      "name": "three-d-texture-baking",
+      "category": "3D asset production",
+      "description": "Use when the task is to bake maps and verify cage, ray distance, tangent space, and artifacts."
+    },
+    {
+      "name": "three-d-topology-review",
+      "category": "3D asset production",
+      "description": "Use when the task is to inspect edge flow, poles, deformation zones, and subdivision behavior."
+    },
+    {
+      "name": "three-d-uv-layout",
+      "category": "3D asset production",
+      "description": "Use when the task is to create UV layouts with texel density, seam, and packing constraints."
+    },
+    {
+      "name": "unity-addressables-design",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to plan Addressables groups, labels, profiles, and dependency boundaries."
+    },
+    {
+      "name": "unity-animation-pipeline",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to integrate rigs, clips, masks, and animation controllers."
+    },
+    {
+      "name": "unity-asset-import",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to import models and textures with platform-specific settings and metadata."
+    },
+    {
+      "name": "unity-build-validation",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to validate builds across target platforms with reproducible settings."
+    },
+    {
+      "name": "unity-editor-automation",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to automate editor workflows with safe, scoped Unity Editor scripts."
+    },
+    {
+      "name": "unity-material-authoring",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to build materials and Shader Graphs with variant and render-pipeline awareness."
+    },
+    {
+      "name": "unity-performance-audit",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to measure CPU, GPU, memory, batching, and asset-loading costs."
+    },
+    {
+      "name": "unity-project-audit",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to inspect Unity project settings, packages, scenes, and build targets."
+    },
+    {
+      "name": "unity-shader-review",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to review shader correctness, precision, variants, and mobile constraints."
+    },
+    {
+      "name": "unity-timeline-cinematics",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to build Timeline sequences with track, binding, and render checks."
+    },
+    {
+      "name": "unreal-asset-import",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to import meshes and textures with correct units, LODs, and collision."
+    },
+    {
+      "name": "unreal-blueprint-architecture",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to design readable Blueprint systems with clear ownership and interfaces."
+    },
+    {
+      "name": "unreal-build-validation",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to validate packaged builds, logs, platform settings, and clean startup."
+    },
+    {
+      "name": "unreal-character-animation",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to integrate skeletons, animation assets, retargeting, and state machines."
+    },
+    {
+      "name": "unreal-landscape-workflow",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to create terrain and landscape layers with scale and streaming checks."
+    },
+    {
+      "name": "unreal-material-authoring",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to build material graphs with texture sampling and shader-cost checks."
+    },
+    {
+      "name": "unreal-niagara-effects",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to build Niagara effects with budgets, scalability, and deterministic review."
+    },
+    {
+      "name": "unreal-performance-audit",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to profile frame time, memory, shader, and draw-call hotspots."
+    },
+    {
+      "name": "unreal-project-audit",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to inspect Unreal project structure, plugins, assets, and build settings."
+    },
+    {
+      "name": "unreal-sequencer-editing",
+      "category": "Unreal & Unity specialists",
+      "description": "Use when the task is to assemble cinematic sequences with camera cuts and timecode review."
+    },
+    {
+      "name": "video-audio-sync",
+      "category": "Video production",
+      "description": "Use when the task is to synchronize picture and sound using timecode or measured waveform cues."
+    },
+    {
+      "name": "video-brief-to-shotlist",
+      "category": "Video production",
+      "description": "Use when the task is to convert a video brief into a shot list with duration, framing, and purpose."
+    },
+    {
+      "name": "video-camera-language",
+      "category": "Video production",
+      "description": "Use when the task is to design shot size, lens feel, camera movement, and screen direction."
+    },
+    {
+      "name": "video-caption-delivery",
+      "category": "Video production",
+      "description": "Use when the task is to create checked subtitle files and platform-specific burned-in captions."
+    },
+    {
+      "name": "video-character-continuity",
+      "category": "Video production",
+      "description": "Use when the task is to keep character appearance, wardrobe, props, and screen direction stable across shots."
+    },
+    {
+      "name": "video-color-management",
+      "category": "Video production",
+      "description": "Use when the task is to apply a consistent color-management pipeline from ingest to master."
+    },
+    {
+      "name": "video-fine-cut",
+      "category": "Video production",
+      "description": "Use when the task is to refine pacing, cut points, action continuity, and audio transitions."
+    },
+    {
+      "name": "video-footage-selects",
+      "category": "Video production",
+      "description": "Use when the task is to create a searchable selects log with source timecodes and rejection reasons."
+    },
+    {
+      "name": "video-image-to-motion",
+      "category": "Video production",
+      "description": "Use when the task is to turn an approved still into a motion brief with camera and subject constraints."
+    },
+    {
+      "name": "video-look-match",
+      "category": "Video production",
+      "description": "Use when the task is to match a grade to a visual reference while protecting skin and highlight detail."
+    },
+    {
+      "name": "video-master-export",
+      "category": "Video production",
+      "description": "Use when the task is to create platform masters with explicit codec, bitrate, color, and audio settings."
+    },
+    {
+      "name": "video-quality-control",
+      "category": "Video production",
+      "description": "Use when the task is to run a technical and editorial quality-control pass on a finished sequence."
+    },
+    {
+      "name": "video-reference-motion",
+      "category": "Video production",
+      "description": "Use when the task is to extract useful motion, timing, and camera cues from a supplied video reference."
+    },
+    {
+      "name": "video-rough-cut",
+      "category": "Video production",
+      "description": "Use when the task is to assemble a rough cut that follows the brief and preserves source provenance."
+    },
+    {
+      "name": "video-seamless-loop",
+      "category": "Video production",
+      "description": "Use when the task is to create a seamless loop and verify the join at normal playback speed."
+    },
+    {
+      "name": "video-shot-matching",
+      "category": "Video production",
+      "description": "Use when the task is to match exposure, white balance, framing, and motion between source clips."
+    },
+    {
+      "name": "video-social-reframe",
+      "category": "Video production",
+      "description": "Use when the task is to reframe landscape footage for vertical and square outputs without losing subjects."
+    },
+    {
+      "name": "video-storyboard-plan",
+      "category": "Video production",
+      "description": "Use when the task is to build a storyboard with continuity notes and per-shot acceptance criteria."
+    },
+    {
+      "name": "video-transition-design",
+      "category": "Video production",
+      "description": "Use when the task is to choose transitions that support story and avoid decorative overuse."
+    },
+    {
+      "name": "video-upscale-delivery",
+      "category": "Video production",
+      "description": "Use when the task is to upscale footage and inspect temporal artifacts, detail stability, and cadence."
+    },
+    {
+      "name": "visual-consistency-audit",
+      "category": "Asset & reference operations",
+      "description": "Use when the task is to review a batch for identity, palette, silhouette, and rendering drift."
+    },
+    {
+      "name": "zbrush-3d-print-check",
+      "category": "ZBrush specialists",
+      "description": "Use when the task is to check scale, shell thickness, hollowing, and drain paths for printing."
+    },
+    {
+      "name": "zbrush-character-sculpt",
+      "category": "ZBrush specialists",
+      "description": "Use when the task is to sculpt character anatomy with proportion and landmark review."
+    },
+    {
+      "name": "zbrush-creature-anatomy",
+      "category": "ZBrush specialists",
+      "description": "Use when the task is to design creature anatomy with coherent attachment and weight distribution."
+    },
+    {
+      "name": "zbrush-decimation-review",
+      "category": "ZBrush specialists",
+      "description": "Use when the task is to reduce polygon count while preserving silhouette and detail."
+    },
+    {
+      "name": "zbrush-goz-roundtrip",
+      "category": "ZBrush specialists",
+      "description": "Use when the task is to transfer assets between ZBrush and DCC tools with naming and scale checks."
+    },
+    {
+      "name": "zbrush-hard-surface-sculpt",
+      "category": "ZBrush specialists",
+      "description": "Use when the task is to create hard-surface forms with controlled panels and edge definition."
+    },
+    {
+      "name": "zbrush-live-boolean",
+      "category": "ZBrush specialists",
+      "description": "Use when the task is to use live Boolean workflows and inspect topology after remeshing."
+    },
+    {
+      "name": "zbrush-polypaint-workflow",
+      "category": "ZBrush specialists",
+      "description": "Use when the task is to paint color zones and verify vertex-color export requirements."
+    },
+    {
+      "name": "zbrush-pose-presentation",
+      "category": "ZBrush specialists",
+      "description": "Use when the task is to pose a model and produce consistent review renders."
+    },
+    {
+      "name": "zbrush-retopology-export",
+      "category": "ZBrush specialists",
+      "description": "Use when the task is to retopologize and export a sculpt for animation or realtime use."
+    },
+    {
+      "name": "zbrush-sculpt-foundations",
+      "category": "ZBrush specialists",
+      "description": "Use when the task is to build primary and secondary sculpt forms before surface detail."
+    },
+    {
+      "name": "zbrush-uv-map-bake",
+      "category": "ZBrush specialists",
+      "description": "Use when the task is to create UVs and bake maps with projection and cage verification."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-skill-garage"
+version = "1.0.0"
+description = "Portable agent skills and local-first creative production tools"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Agentic Skill Garage contributors" }]
+dependencies = []
+classifiers = ["Programming Language :: Python :: 3", "Programming Language :: Python :: 3.10", "License :: OSI Approved :: Apache Software License"]
+
+[project.optional-dependencies]
+images = ["Pillow>=10.0"]
+
+[project.scripts]
+asg = "agentic_skill_garage.cli:main"
+agentic-skill-garage = "agentic_skill_garage.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
